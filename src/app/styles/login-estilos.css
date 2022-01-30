@@ -1,0 +1,89 @@
+
+body{
+
+    margin-top:10%;
+    background-image: url(../../Imagenes/forest-landscape.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+
+}
+
+.formulario-label{
+
+    opacity: 0.3;
+    border-radius: 14px;
+
+}
+
+.subrayado{
+
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(114deg, rgba(34,87,122,1) 1%, rgba(56,163,165,1) 9%, rgba(87,204,153,1) 36%, rgba(128,237,153,1) 71%, rgba(199,249,204,1) 96%);
+    border-image-slice: 1;
+    width:30%;
+
+
+}
+
+/* .border-gradient{
+
+    border: 1px solid transparent;
+    border-image: linear-gradient(114deg, rgba(34,87,122,1) 1%, rgba(56,163,165,1) 9%, rgba(87,204,153,1) 36%, rgba(128,237,153,1) 71%, rgba(199,249,204,1) 96%);
+
+}    */
+
+.boton-login{
+
+    background-color: #22577A;
+    color: rgb(221, 221, 221);
+
+}
+
+.boton-login:hover{
+
+    background-color: #57CC99;
+
+}
+
+.subrayado:hover{
+
+    cursor: pointer;
+
+}
+
+.noactive{
+
+    opacity:0.5;
+
+}
+
+#formulario{
+
+    width:60%;
+    height:100%;
+
+}
+
+.enlace{
+
+    color: black;
+
+}
+
+
+.box-shadow{
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+
+}
+
+.input{
+
+    border: 1px solid #57CC99;
+    opacity: 0.8;
+
+}

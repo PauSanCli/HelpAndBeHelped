@@ -1,0 +1,13 @@
+
+.pagar{
+
+    border: 1px solid #38A3A5;
+    color:black;
+    
+}
+
+.pagar:hover{
+
+    background-color:#80ED99;
+
+}
