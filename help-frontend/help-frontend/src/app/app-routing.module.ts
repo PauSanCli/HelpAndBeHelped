@@ -4,7 +4,8 @@ import { BaseComponent } from './Includes/base/base.component';
 
 const routes: Routes = [
 
-  { path: 'base', component: BaseComponent },
+  { path: '', component: BaseComponent },
+  // { path: 'base', component: BaseComponent },
 
 ];
 
