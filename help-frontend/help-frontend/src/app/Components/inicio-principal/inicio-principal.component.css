@@ -1,0 +1,15 @@
+
+
+#hr_formulario{
+
+    background: linear-gradient(90deg, rgba(19,252,136,1) 0%, rgba(9,92,121,1) 64%, rgba(20,107,125,1) 100%);
+
+}
+
+#div_login{
+
+    /* border: 1px solid; */
+    border-radius: 50px;
+    border-color: rgba(39, 148, 221, 0.3);
+
+}

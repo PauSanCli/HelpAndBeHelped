@@ -1,29 +1,37 @@
 
-  <div class="row">
+  <div class="row mt-5">
 
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-0 col-xs-0 border">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-0 col-xs-0">
 
-      <img src="../../../assets/Imagenes/animals.jpg" alt="" class="img-fluid p-5 rounded">
+      <img src="../../../assets/Imagenes/animals.jpg" alt="" class="img-fluid p-5 rounded-pill">
 
     </div>
+ 
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 border-start shadow" id="div_login"> 
 
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 border"> 
 
-
-        <form action="" class="p-5 text-center" method="post">
+        <form action="" class="p-5 align-middle mt-5 fw-bold" method="post" id="formulario_login">
   
-          <h5>Iniciar Sesión</h5>
-          <hr class="w-50">
-          <div class="mb-3 pt-5">
+          <p class="fs-2 fw-bold text-center">Iniciar Sesión</p>
+          <hr id="hr_formulario">
+          <div class="mb-3 pt-5 text-center">
             <label for="exampleFormControlInput1" class="form-label">Correo</label>
             <input type="email" class="form-control rounded-pill border-success">
           </div>
 
-          <div class="mb-3 pt-5">
+          <div class="mb-3 pt-5 text-center">
             <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
             <input type="password" class="form-control rounded-pill border-success">
           </div>
   
+          <div class="mb-3 pt-5 text-center">
+            <button type="button" class="btn btn-outline-dark rounded-pill"><span class="p-4">Iniciar Sesión</span></button>
+          </div>
+          
+        <p class="text-muted pt-5">
+          Has olvidado tu <a href="#" class="text-reset">contraseña</a>?.
+        </p>
+
         </form>
 
 

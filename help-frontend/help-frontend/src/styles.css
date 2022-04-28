@@ -4,7 +4,7 @@
 
 body{
 
-    background-image:'../src/assets/Imagenes/background/bg-principal.png';
+    background-image: url('./assets/Imagenes/background/bg-principal.png');
+    background-repeat: none;
 
 }
-
