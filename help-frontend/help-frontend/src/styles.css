@@ -4,7 +4,8 @@
 
 body{
 
-    background-image: url('./assets/Imagenes/background/bg-principal.png');
-    background-repeat: none;
+    /* background: url('./assets/Imagenes/background/cerezo.jpg') no-repeat center center fixed; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
 
 }
