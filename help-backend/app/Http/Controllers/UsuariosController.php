@@ -21,11 +21,18 @@ class UsuariosController extends Controller
 
 
 
+    public function user($username){
+
+        dd($username);
+        return $this->getUsuariosRepo()->search($username);
+
+
+    }
 
     public function prueba(){
 
+        return $this->getUsuariosRepo()->search('sanchez')[0];
 
-        return $this->getUsuariosRepo()->getAll();
 
     }
 

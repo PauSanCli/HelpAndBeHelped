@@ -39,4 +39,10 @@ class UsuariosRepository
         return Usuarios::where('is_fulfilled', true);
     }
 
+    public function search($username){
+
+        return Usuarios::where('username', $username)->limit(1)->get();
+
+    }
+
 }

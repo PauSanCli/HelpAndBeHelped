@@ -16,16 +16,16 @@
           <hr id="hr_formulario">
           <div class="mb-3 pt-5 text-center">
             <label for="exampleFormControlInput1" class="form-label">Correo</label>
-            <input type="email" class="form-control rounded-pill border-success">
+            <input #username type="email" class="form-control rounded-pill border-success" name="username" required>
           </div>
 
           <div class="mb-3 pt-5 text-center">
             <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control rounded-pill border-success">
+            <input #password type="password" class="form-control rounded-pill border-success" name="password" required>
           </div>
   
           <div class="mb-3 pt-5 text-center">
-            <button type="button" class="btn btn-outline-dark rounded-pill"><span class="p-4">Iniciar Sesión</span></button>
+            <button type="button" class="btn btn-outline-dark rounded-pill" (click)="login(username, password)"><span class="p-4">Iniciar Sesión</span></button>
           </div>
           
         <p class="text-muted pt-5">
