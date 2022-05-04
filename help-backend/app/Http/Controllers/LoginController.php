@@ -24,9 +24,8 @@ class LoginController extends Controller
 
         $user = $this->getUsuariosController()->user($request->user);
 
-        // $password = Hash::check($request->password, $user->password);
 
-        if($request->password === $user->password){
+        if(Hash::check($request->password, $user->password)){
 
             return true;
 
@@ -37,8 +36,18 @@ class LoginController extends Controller
         }
 
 
-        
+    }
 
+
+    public function register(Request $request){
+
+
+        $user = new Usuarios;
+        $user->username = $request->username;
+        $user->password = Hash::make($request->password);
+
+        $user->save();
+        
 
     }
 
