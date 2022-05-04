@@ -27,6 +27,7 @@ class LoginController extends Controller
 
         if(Hash::check($request->password, $user->password)){
 
+            $this->createSession($user);
             return true;
 
         }else{
@@ -39,6 +40,16 @@ class LoginController extends Controller
     }
 
 
+    public function logout(){
+
+
+        Session::forget('user');
+        
+
+    }
+
+
+
     public function register(Request $request){
 
 
@@ -47,11 +58,17 @@ class LoginController extends Controller
         $user->password = Hash::make($request->password);
 
         $user->save();
-        
+
 
     }
 
 
+    public function createSesion(Usuarios $user){
+
+        Session::put('user', $user);
+
+
+    }
 
 
 
