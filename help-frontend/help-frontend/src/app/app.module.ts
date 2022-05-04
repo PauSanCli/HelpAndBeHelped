@@ -9,6 +9,8 @@ import { InicioPrincipalComponent } from './Components/inicio-principal/inicio-p
 import { PaginaPrincipalComponent } from './Components/pagina-principal/pagina-principal.component';
 import { EstructuraPrincipalComponent } from './Components/estructura-principal/estructura-principal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './Components/register/register.component';
+import { BaseRegistroComponent } from './Components/base-registro/base-registro.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     InicioPrincipalComponent,
     PaginaPrincipalComponent,
     EstructuraPrincipalComponent,
+    RegisterComponent,
+    BaseRegistroComponent,
   ],
   imports: [
     BrowserModule,

@@ -45,25 +45,41 @@
 
         <form action="" class="p-5 align-middle mt-5 fw-bold" method="post" id="formulario_login">
   
-          <p class="fs-2 fw-bold text-center">Iniciar Sesión</p>
+          <div class="d-flex justify-content-center">
+
+            <p class="fs-3 fw-bold text-center">Iniciar Sesión</p>
+
+    
+          </div>
+
+
+
           <hr id="hr_formulario">
           <div class="mb-3 pt-5 text-center">
             <label for="exampleFormControlInput1" class="form-label">Correo</label>
-            <input #username type="email" class="form-control rounded-pill border-success" name="username" required>
+            <input #username type="email" class="form-control rounded-pill border-success w-75" id="input_login" name="username" required>
           </div>
 
           <div class="mb-3 pt-5 text-center">
             <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-            <input #password type="password" class="form-control rounded-pill border-success" name="password" required>
+            <input #password type="password" class="form-control rounded-pill border-success w-75" id="input_login" name="password" required>
           </div>
   
           <div class="mb-3 pt-5 text-center">
-            <button type="button" class="btn btn-outline-dark rounded-pill" (click)="login(username, password)"><span class="p-4">Iniciar Sesión</span></button>
+            <button type="button" class="btn btn-outline-dark rounded-pill " (click)="login(username, password)"><span class="p-4">Iniciar Sesión</span></button>
           </div>
           
-        <p class="text-muted pt-5">
-          Has olvidado tu <a href="#" class="text-reset">contraseña</a>?.
-        </p>
+          <div class="d-flex justify-content-between">
+
+            <p class="text-muted pt-5">
+              Has olvidado tu <a href="#" class="text-reset">contraseña</a>?.
+            </p>
+
+            <p class="text-muted pt-5">
+              No tienes cuenta? <a href="/registro" class="text-reset">Regístrate</a>.
+            </p>
+
+          </div>
 
         </form>
 
