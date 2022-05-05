@@ -21,3 +21,16 @@
     float: none;
 
 }
+
+
+#correcta{
+
+    display: block;
+
+}
+
+#incorrecta{
+
+    display: none;
+
+}

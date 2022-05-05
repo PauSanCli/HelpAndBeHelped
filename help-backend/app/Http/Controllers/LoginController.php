@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -21,23 +23,28 @@ class LoginController extends Controller
 
 
     public function login(Request $request){
+        
+        $user = $this->getUsuariosController()->user($request->username);
 
-        $user = $this->getUsuariosController()->user($request->user);
+        foreach($user as $usuario){
 
+            if(Hash::check($request->password, $usuario->password)){
 
-        if(Hash::check($request->password, $user->password)){
-
-            $this->createSession($user);
-            return true;
-
-        }else{
-
-            return false;
+                Session::put('user', $usuario);
+                return $usuario;
+    
+            }else{
+    
+                return false;
+    
+            }
 
         }
 
 
+
     }
+
 
 
     public function logout(){
@@ -50,22 +57,16 @@ class LoginController extends Controller
 
 
 
-    public function register(Request $request){
+    public function registro(Request $request){
 
 
         $user = new Usuarios;
         $user->username = $request->username;
+        $user->correo = $request->correo;
         $user->password = Hash::make($request->password);
+        $user->rol = 'user';
 
         $user->save();
-
-
-    }
-
-
-    public function createSesion(Usuarios $user){
-
-        Session::put('user', $user);
 
 
     }

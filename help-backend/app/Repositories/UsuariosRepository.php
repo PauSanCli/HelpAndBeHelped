@@ -41,7 +41,7 @@ class UsuariosRepository
 
     public function search($username){
 
-        return Usuarios::where('username', $username)->limit(1)->get();
+        return Usuarios::where(['username' => $username])->limit(1)->get();
 
     }
 

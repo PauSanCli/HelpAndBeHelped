@@ -23,9 +23,7 @@ class UsuariosController extends Controller
 
     public function user($username){
 
-        dd($username);
         return $this->getUsuariosRepo()->search($username);
-
 
     }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import axios from 'axios';
 
 @Component({
@@ -10,7 +11,10 @@ import axios from 'axios';
 export class InicioPrincipalComponent implements OnInit {
 
   usuarios:any[];
+  correcta:string = "incorrecta";
+  incorrecta:string = "incorrecta";
 
+  
 
 
   constructor(public http: HttpClient) {
@@ -23,21 +27,23 @@ export class InicioPrincipalComponent implements OnInit {
 
   public login(username:any, password:any){
 
-    // this.http.post<any>('http://127.0.0.1:8000/api/login', {user:username.value, password:password.value}).subscribe(response => {
+      axios.post('http://127.0.0.1:8000/api/login', {username:username.value , password:password.value}).then(function (response) {
 
-    //   console.log(response);
-
-    // })
-
-
-      axios.post('http://127.0.0.1:8000/api/login', {user:username.value, password:password.value}).then(function (response) {
-
-        console.log(response)
+        sessionStorage.setItem('usuario', response.data);
 
       })
 
+      if(sessionStorage.getItem('usuario') === undefined){
 
+        this.incorrecta = "correcta";
 
+      }else{
+
+        this.correcta = "correcta";
+        // window.location.href = "welcome";
+
+      }
+      
 
   }
 
