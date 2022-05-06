@@ -27,29 +27,46 @@ export class InicioPrincipalComponent implements OnInit {
 
   public login(username:any, password:any){
 
-      axios.post('http://127.0.0.1:8000/api/login', {username:username.value , password:password.value}).then(function (response) {
+      axios.post('http://127.0.0.1:8000/api/login', {username:username.value , password:password.value}) .then(response =>{
 
-        sessionStorage.setItem('usuario', response.data);
+        this.checkUser(response.data)
 
-      })
-
-      if(sessionStorage.getItem('usuario') === undefined){
-
-        this.incorrecta = "correcta";
-
-      }else{
-
-        this.correcta = "correcta";
-        // window.location.href = "welcome";
-
-      }
-      
+        })
 
   }
 
 
+  public checkUser(user:any){
+
+    console.log(user);
+
+    if(user == ""){
+
+      this.incorrecta = "correcta";
 
 
+        setTimeout(()=>{                           
+          this.incorrecta = "incorrecta";
+        }, 3000);
+
+
+    }else{
+
+      this.incorrecta = "incorrecta";
+      this.correcta = "correcta";
+      
+      sessionStorage.setItem('usuario', user);
+
+      setTimeout(()=>{    
+
+        window.location.href = "welcome";
+
+      }, 1500);
+
+
+    }
+
+  }
 
 
 

@@ -24,22 +24,30 @@ class LoginController extends Controller
 
     public function login(Request $request){
         
-        $user = $this->getUsuariosController()->user($request->username);
+        if($user = $this->getUsuariosController()->user($request->username)){
 
-        foreach($user as $usuario){
+            foreach($user as $usuario){
 
-            if(Hash::check($request->password, $usuario->password)){
-
-                Session::put('user', $usuario);
-                return $usuario;
+                if(Hash::check($request->password, $usuario->password)){
     
-            }else{
-    
-                return false;
+                    Session::put('user', $usuario);
+                    return $usuario;
+        
+                }else{
+        
+                    return false;
+        
+                }
     
             }
 
-        }
+        }else{
+
+            return false;
+
+        };
+
+
 
 
 
