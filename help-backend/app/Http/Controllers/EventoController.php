@@ -30,13 +30,17 @@ class EventoController extends Controller
 
     }
 
-
     public function updateEvento(Request $request){
 
 
 
     }
 
+    public function infoEvento($id){
+
+        return $this->getEventoRepository()->getById($id);
+
+    }
 
     /**
      * Get the value of EventoRepository

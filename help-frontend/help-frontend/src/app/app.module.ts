@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './Components/register/register.component';
 import { BaseRegistroComponent } from './Components/base-registro/base-registro.component';
 import { LogoutComponent } from './Components/logout/logout.component';
+import { EventoInfoComponent } from './Components/evento-info/evento-info.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { LogoutComponent } from './Components/logout/logout.component';
     RegisterComponent,
     BaseRegistroComponent,
     LogoutComponent,
+    EventoInfoComponent
   ],
   imports: [
     BrowserModule,

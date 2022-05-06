@@ -16,8 +16,10 @@
                     <p class="text-muted">Fecha {{ evento.fecha }}</p>
                     <p class="text-muted">Organizador {{ evento.organizador }}</p>
 
-                    <div class="d-grid gap-2 col-6 mx-auto rounded">
-                      <button type="button" class="btn btn-sm btn-outline-success rounded-pill">Información</button>
+                    <div class="d-grid gap-3 col-6 mx-auto rounded">
+
+                        <a [routerLink] = "['/getEvento/', evento.id ]"><button type="button" class="btn btn-outline-success rounded-pill">Información</button></a>
+                    
                     </div>
   
                   </div>

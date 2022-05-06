@@ -4,6 +4,8 @@ import { BaseComponent } from './Includes/base/base.component';
 import { PaginaPrincipalComponent } from './Components/pagina-principal/pagina-principal.component';
 import { BaseRegistroComponent } from './Components/base-registro/base-registro.component';
 import { LogoutComponent }  from './Components/logout/logout.component';
+import { EventoInfoComponent } from './Components/evento-info/evento-info.component'
+
 
 
 const routes: Routes = [
@@ -11,7 +13,9 @@ const routes: Routes = [
   { path: '', component: BaseComponent },
   { path: 'welcome', component: PaginaPrincipalComponent },
   { path: 'registro', component: BaseRegistroComponent},
-  { path: 'logout' , component: BaseComponent }
+  { path: 'logout' , component: LogoutComponent },
+  { path: 'getEvento/:id', component: EventoInfoComponent}
+
 
 ];
 
