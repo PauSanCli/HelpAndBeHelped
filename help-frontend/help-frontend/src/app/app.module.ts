@@ -11,6 +11,7 @@ import { EstructuraPrincipalComponent } from './Components/estructura-principal/
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './Components/register/register.component';
 import { BaseRegistroComponent } from './Components/base-registro/base-registro.component';
+import { LogoutComponent } from './Components/logout/logout.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { BaseRegistroComponent } from './Components/base-registro/base-registro.
     EstructuraPrincipalComponent,
     RegisterComponent,
     BaseRegistroComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

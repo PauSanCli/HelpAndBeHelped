@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\EventoController;
 use App\Http\Controllers\UsuariosController;
 
 /*
@@ -35,3 +36,5 @@ Route::post('login', [LoginController::class, 'login'])->name('login');
 Route::post('registro', [LoginController::class, 'registro'])->name('registro');
 
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('getEventos', [EventoController::class, 'getEventos'])->name('getEventos');

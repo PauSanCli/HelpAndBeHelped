@@ -4,3 +4,18 @@
 
 
 } */
+
+
+#hover:hover{
+
+    cursor: pointer;
+
+}
+
+
+#hover{
+
+    text-decoration: none !important;
+    color: inherit !important;
+
+}
