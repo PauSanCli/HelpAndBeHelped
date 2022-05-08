@@ -9,6 +9,7 @@ import axios from 'axios';
 export class EventoInfoComponent implements OnInit {
 
   ruta:string;
+  evento:any;
 
   constructor() { 
 
@@ -23,7 +24,8 @@ export class EventoInfoComponent implements OnInit {
 
     axios.get(`http://127.0.0.1:8000/api/getEvento/${id}`) .then(response =>{
 
-      console.log(response.data)
+      this.evento = response.data;
+      console.log(this.evento)
 
     })
 

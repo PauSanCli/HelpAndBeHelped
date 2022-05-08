@@ -1,1 +1,107 @@
-<p>evento-info works!</p>
+
+
+
+
+
+
+<div class="container-fluid">
+
+    <div class="row mb-5">
+
+        <app-header></app-header>
+
+
+    </div>
+
+    <div class="row">
+
+        <nav class="navbar navbar-expand-md navbar-light mt-1"  style="background-color: #d0f3c76c;">
+
+            <div class="d-flex justify-content-between w-100">
+
+                <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link borde-color" href="/welcome"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/welcome"><i class="fas fa-star"></i> Favoritos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/welcome"><i class="fa-solid fa-address-book"></i> Contacto</a>
+                        </li>
+                        <div class="dropdown ">
+                            <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-search"></i> Buscar</a>
+        
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="nav-link dropdown-item" href="#"><i class="fas fa-fire"></i> Popular</a>
+                                <a class="nav-link dropdown-item" href="#"><i class="fas fa-leaf"></i> Naturaleza</a>
+                                <a class="nav-link dropdown-item" href="#"><i class="fas fa-paw"></i> Animales</a>
+                                <a class="nav-link disabled dropdown-item noclick bg-light"><i class="fas fa-calendar-alt"></i>Comming Soon</a>
+                            </div>
+                        
+                        </div>
+                        </ul>
+    
+                    </div>
+                </div>
+
+                <div class="mt-2 me-5">
+                    <a href="/logout" id="hover"><p class="fw-light" id="hover" ><i class="fa-solid fa-user me-2" style="color:grey"></i>Cerrar Sesión</p></a>
+                </div>
+
+            </div>
+
+
+
+
+
+        </nav>
+
+
+    </div>
+
+    <div class="row mt-5">
+
+        <div class="col-lg-12 md-12 col-sm-12 col-xs-12 border d-flex aligns-items-center">
+
+            <div class="row w-50">
+
+                <div class="col">
+
+                    <img src="../../../assets/Imagenes/animals.jpg" alt="" class="img-fluid rounded">
+
+                </div>
+                
+                <div class="col mt-5">
+ 
+
+                    <p class="fs-1 fst-italic">{{evento.nombre}}</p>
+                    <p class="">{{evento.descripcion}}</p>
+                    <p class="">Localización: {{evento.localizacion}}</p>
+                    <p>Organizador: {{evento.organizador}}</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="row mt-5">
+
+        <app-footer></app-footer>
+
+    </div>
+
+
+</div>
