@@ -8,20 +8,24 @@
             <div class="d-flex justify-content-center">
   
               <p class="fs-3 fw-bold text-center">Registrarse</p>
-  
       
             </div>
+
+            
+            <div class="alert alert-success" role="alert" id="{{cartel}}"> Usuario creado correctamente !</div>
+
+            
   
             <hr id="hr_formulario">
 
             <div class="mb-3 pt-5 text-center">
                 <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                <input #username type="email" class="form-control rounded-pill border-success w-75" id="input_login" name="username" required>
+                <input #username type="text" class="form-control rounded-pill border-success w-75" id="input_login" name="username" required>
               </div>
 
             <div class="mb-3 pt-5 text-center">
               <label for="exampleFormControlInput1" class="form-label">Correo</label>
-              <input #username type="email" class="form-control rounded-pill border-success w-75" id="input_login" name="username" required>
+              <input #correo type="email" class="form-control rounded-pill border-success w-75" id="input_login" name="correo" required>
             </div>
   
             <div class="mb-3 pt-5 text-center">
@@ -30,7 +34,7 @@
             </div>
     
             <div class="mb-3 pt-5 text-center">
-              <button type="button" class="btn btn-outline-dark rounded-pill w-25"><span class="p-4">Enviar</span></button>
+              <button type="button" class="btn btn-outline-dark rounded-pill w-25" (click)="registro(username,correo,password)"><span class="p-4">Enviar</span></button>
             </div>
             
             <div class="d-flex justify-content-between">

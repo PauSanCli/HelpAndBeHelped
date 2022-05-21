@@ -77,6 +77,8 @@ class LoginController extends Controller
         $user->save();
 
 
+        return true;
+
     }
 
 

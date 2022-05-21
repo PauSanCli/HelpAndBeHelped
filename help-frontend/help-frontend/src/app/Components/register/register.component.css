@@ -21,3 +21,16 @@
     float: none;
 
 }
+
+
+#hidden{
+
+    display: none;
+
+}
+
+#show{
+
+    display: block;
+
+}

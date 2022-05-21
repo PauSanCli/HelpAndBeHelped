@@ -29,6 +29,7 @@ export class InicioPrincipalComponent implements OnInit {
 
       axios.post('http://127.0.0.1:8000/api/login', {username:username.value , password:password.value}) .then(response =>{
 
+        console.log(response)
         this.checkUser(response.data)
 
         })
@@ -38,7 +39,6 @@ export class InicioPrincipalComponent implements OnInit {
 
   public checkUser(user:any){
 
-    console.log(user);
 
     if(user == ""){
 
