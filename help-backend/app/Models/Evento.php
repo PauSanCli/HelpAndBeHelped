@@ -19,4 +19,6 @@ class Evento extends Model
 
     }
 
+    public $timestamps = null;
+
 }

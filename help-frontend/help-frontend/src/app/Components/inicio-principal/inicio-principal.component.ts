@@ -54,8 +54,9 @@ export class InicioPrincipalComponent implements OnInit {
 
       this.incorrecta = "incorrecta";
       this.correcta = "correcta";
-      
-      sessionStorage.setItem('usuario', user);
+
+      sessionStorage.setItem('usuario', user.username);
+      sessionStorage.setItem('rol', user.rol);
 
       setTimeout(()=>{    
 

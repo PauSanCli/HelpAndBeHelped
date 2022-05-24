@@ -59,6 +59,8 @@ class LoginController extends Controller
 
 
         Session::forget('user');
+
+        return true;
         
 
     }
@@ -75,7 +77,6 @@ class LoginController extends Controller
         $user->rol = 'user';
 
         $user->save();
-
 
         return true;
 

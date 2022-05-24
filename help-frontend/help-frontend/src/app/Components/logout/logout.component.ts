@@ -11,13 +11,15 @@ export class LogoutComponent implements OnInit {
   constructor() { 
 
 
-    this.logout
+    this.logout()
 
 
   }
 
 
   public logout(){
+
+    sessionStorage.clear()
 
     axios.get('http://127.0.0.1:8000/api/logout', {}) .then(response =>{
 

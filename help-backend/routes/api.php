@@ -40,3 +40,5 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('getEventos', [EventoController::class, 'getEventos'])->name('getEventos');
 
 Route::get('getEvento/{id}', [EventoController::class, 'infoEvento'])->name('getEvento');
+
+Route::post('newEvento', [EventoController::class, 'newEvento'])->name('newEvento');

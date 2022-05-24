@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaPrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+
+    this.checkRol();
+
+  }
 
   ngOnInit(): void {
+  }
+
+  public checkRol(){
+
+    if(sessionStorage.getItem('rol') == null){
+
+      window.location.href = "/";
+
+    }
+
   }
 
 }

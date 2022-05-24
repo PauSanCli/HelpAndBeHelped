@@ -13,6 +13,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { BaseRegistroComponent } from './Components/base-registro/base-registro.component';
 import { LogoutComponent } from './Components/logout/logout.component';
 import { EventoInfoComponent } from './Components/evento-info/evento-info.component';
+import { NewEventoComponent } from './Components/new-evento/new-evento.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EventoInfoComponent } from './Components/evento-info/evento-info.compon
     RegisterComponent,
     BaseRegistroComponent,
     LogoutComponent,
-    EventoInfoComponent
+    EventoInfoComponent,
+    NewEventoComponent
   ],
   imports: [
     BrowserModule,
