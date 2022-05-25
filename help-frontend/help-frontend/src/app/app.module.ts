@@ -14,6 +14,7 @@ import { BaseRegistroComponent } from './Components/base-registro/base-registro.
 import { LogoutComponent } from './Components/logout/logout.component';
 import { EventoInfoComponent } from './Components/evento-info/evento-info.component';
 import { NewEventoComponent } from './Components/new-evento/new-evento.component';
+import { NavComponent } from './Includes/nav/nav.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NewEventoComponent } from './Components/new-evento/new-evento.component
     BaseRegistroComponent,
     LogoutComponent,
     EventoInfoComponent,
-    NewEventoComponent
+    NewEventoComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
