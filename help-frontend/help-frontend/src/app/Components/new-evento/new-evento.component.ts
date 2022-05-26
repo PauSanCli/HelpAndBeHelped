@@ -17,12 +17,15 @@ export class NewEventoComponent implements OnInit {
   titulo:any;
   formFile:any;
 
+  correcto:string;
+
   
 
 
 
   constructor() { 
 
+    this.correcto = 'hidden'
     // this.checkRol();
     this.usuario = sessionStorage.getItem('usuario')
 
@@ -35,7 +38,14 @@ export class NewEventoComponent implements OnInit {
 
   public addEvento(){
 
-    console.log(this.descripcion)
+    axios.post('http://127.0.0.1:8000/api/newEvento', {}) .then(response =>{
+
+
+      this.correcto = 'show'
+
+
+    })
+
 
   }
 

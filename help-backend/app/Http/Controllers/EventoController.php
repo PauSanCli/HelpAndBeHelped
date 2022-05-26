@@ -57,6 +57,21 @@ class EventoController extends Controller
 
     }
 
+    public function searchEvent(Request $request){
+
+        if($request->tipo == 'Novedades'){
+
+            return $this->getEventos();
+
+        }else{
+
+            return $this->getEventoRepository()->searchBy($request->tipo);
+
+        }
+
+
+    }
+
 
     public function getEventos(){
 

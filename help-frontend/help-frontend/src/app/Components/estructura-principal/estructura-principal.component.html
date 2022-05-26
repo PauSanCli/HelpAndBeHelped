@@ -5,18 +5,18 @@
 
     
         
-        <div class="row row-cols-1 row-cols-md-4 g-4 me-3 ms-3" id="contenedor_eventos">
+        <div class="row g-4 me-3 ms-3 h-100" id="contenedor_eventos">
 
-              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" *ngFor="let evento of eventos">
-                <div class="card w-75">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" *ngFor="let evento of eventos" >
+                <div class="card w-75" id="{{evento.tipo}}">
                   <img src="{{evento.imagen}}" id="foto_cards" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h4 class="card-title text-center pb-2">{{ evento.nombre }}</h4>
                     <p class="card-text">{{ evento.descripcion }}</p>
-                    <p class="text-muted">Fecha {{ evento.fecha }}</p>
-                    <p class="text-muted">Organizador {{ evento.organizador }}</p>
+                    <p class="text-muted">Fecha: {{ evento.fecha }}</p>
+                    <p class="text-muted">Organizador: {{ evento.organizador }}</p>
 
-                    <div class="d-grid gap-3 col-6 mx-auto rounded">
+                    <div class="d-grid gap-3 col-6 mx-auto rounded text-center">
 
                         <a [routerLink] = "['/getEvento/', evento.id ]"><button type="button" class="btn btn-outline-success rounded-pill">Información</button></a>
                     

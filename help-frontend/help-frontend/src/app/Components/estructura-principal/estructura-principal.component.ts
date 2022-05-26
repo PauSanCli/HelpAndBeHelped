@@ -9,7 +9,12 @@ import axios from 'axios';
 })
 export class EstructuraPrincipalComponent implements OnInit {
 
+  filtro:any
+
   constructor() {
+
+    this.filtro = sessionStorage.getItem('filtro');
+
 
     this.peticion();
 
@@ -20,11 +25,20 @@ export class EstructuraPrincipalComponent implements OnInit {
 
   public peticion(){
 
-    axios.get('http://127.0.0.1:8000/api/getEventos', {}) .then(response =>{
+      console.log(this.filtro)
 
-      this.eventos = response.data;
+      if(this.filtro == undefined){
 
-    })
+        this.filtro = 'Novedades'
+
+      }
+
+      axios.post('http://127.0.0.1:8000/api/searchEvento', { tipo:this.filtro }) .then(response =>{
+
+        this.eventos = response.data;
+        console.log(response.data);
+  
+      })
 
   }
 

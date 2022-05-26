@@ -42,3 +42,5 @@ Route::get('getEventos', [EventoController::class, 'getEventos'])->name('getEven
 Route::get('getEvento/{id}', [EventoController::class, 'infoEvento'])->name('getEvento');
 
 Route::post('newEvento', [EventoController::class, 'newEvento'])->name('newEvento');
+
+Route::post('searchEvento', [EventoController::class, 'searchEvent'])->name('searchEvent');

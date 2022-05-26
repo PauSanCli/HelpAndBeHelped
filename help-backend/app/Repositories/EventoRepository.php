@@ -39,4 +39,10 @@ class EventoRepository
         return Evento::where('is_fulfilled', true);
     }
 
+    public function searchBy($filter){
+
+        return Evento::where('tipo', $filter)->get();
+
+    }
+
 }
