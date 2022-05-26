@@ -10,12 +10,21 @@ export class NewEventoComponent implements OnInit {
 
   usuario: any;
   submit:any;
+  descripcion:any;
+  imagen:any;
+  tipo:any;
+  fecha:any;
+  titulo:any;
+  formFile:any;
+
+  
+
+
 
   constructor() { 
 
-    this.checkRol();
+    // this.checkRol();
     this.usuario = sessionStorage.getItem('usuario')
-
 
   }
 
@@ -26,7 +35,7 @@ export class NewEventoComponent implements OnInit {
 
   public addEvento(){
 
-
+    console.log(this.descripcion)
 
   }
 
