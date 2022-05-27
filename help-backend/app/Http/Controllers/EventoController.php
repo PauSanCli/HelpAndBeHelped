@@ -23,31 +23,39 @@ class EventoController extends Controller
 
     public function newEvento(Request $request){
 
-
         $evento = new Evento;
 
-
-        $evento->nombre = $request->titulo;
-        $evento->descripcion = $request->descripcion;
+        $evento->nombre = $request->form['titulo'];
+        $evento->descripcion = $request->form['descripcion'];
         $evento->fecha = Carbon::now();
-        $evento->tipo = $request->tipo;
-        $evento->organizador = $request->organizador;
+        $evento->tipo = $request->form['tipo'];
+        $evento->organizador = $request->form['creador'];
         $evento->creacion = Carbon::now();
+        $evento->localizacion = $request->form['ubicacion'];
         
-        if($request->hasFile('imagen')){
 
-            $imagen = $request->file('imagen');
-            $imagen_name = $imagen->getClientOriginalName();
-            $imagen->move(public_path('../../help-frontend/help-frontend/src/assets/imagenes'), $imagen_name);
+        if($request->form['tipo'] == 'Naturaleza'){
 
-            $evento->imagen = '../../../assets/Imagenes/'.$imagen_name;
+            $evento->imagen = '../../../assets/Imagenes/Naturaleza.jpg';
 
+        }else if($request->form['tipo'] == 'Caridad'){
+
+            $evento->imagen = '../../../assets/Imagenes/Otros.jpg';
+
+        }else if($request->form['tipo'] == 'Animales'){
+
+            $evento->imagen = '../../../assets/Imagenes/Animales.jpg';
+
+        }else if($request->form['tipo'] == 'Limpieza'){
+
+            $evento->imagen = '../../../assets/Imagenes/Limpieza.jpg';
 
         }else{
 
-            $evento->imagen = NULL;
+            $evento->imagen = '../../../assets/Imagenes/Caridad.jpg';
 
         }
+
 
         $evento->save();
 

@@ -57,6 +57,7 @@ export class InicioPrincipalComponent implements OnInit {
 
       sessionStorage.setItem('usuario', user.username);
       sessionStorage.setItem('rol', user.rol);
+      document.cookie = "usuario="+user.username;
 
       setTimeout(()=>{    
 

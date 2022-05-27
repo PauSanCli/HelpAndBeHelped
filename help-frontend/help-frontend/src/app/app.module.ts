@@ -15,7 +15,7 @@ import { LogoutComponent } from './Components/logout/logout.component';
 import { EventoInfoComponent } from './Components/evento-info/evento-info.component';
 import { NewEventoComponent } from './Components/new-evento/new-evento.component';
 import { NavComponent } from './Includes/nav/nav.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,8 @@ import { NavComponent } from './Includes/nav/nav.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

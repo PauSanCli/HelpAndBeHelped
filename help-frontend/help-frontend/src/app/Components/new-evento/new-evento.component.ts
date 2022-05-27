@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-new-evento',
@@ -11,7 +13,6 @@ export class NewEventoComponent implements OnInit {
   usuario: any;
   submit:any;
   descripcion:any;
-  imagen:any;
   tipo:any;
   fecha:any;
   titulo:any;
@@ -22,7 +23,6 @@ export class NewEventoComponent implements OnInit {
   
 
 
-
   constructor() { 
 
     this.correcto = 'hidden'
@@ -31,15 +31,26 @@ export class NewEventoComponent implements OnInit {
 
   }
 
+  formEvento = new FormGroup({
+
+    titulo:new FormControl(''),
+    descripcion:new FormControl(''),
+    formFile:new FormControl('',),
+    tipo:new FormControl(''),
+    fecha:new FormControl(''),
+    ubicacion: new FormControl(''),
+    creador:new FormControl(sessionStorage.getItem('usuario')),
+
+  });
+
   ngOnInit(): void {
   }
 
 
 
-  public addEvento(){
+  public addEvento(form:any){
 
-    axios.post('http://127.0.0.1:8000/api/newEvento', {}) .then(response =>{
-
+    axios.post('http://127.0.0.1:8000/api/newEvento', {form}) .then(response =>{
 
       this.correcto = 'show'
 

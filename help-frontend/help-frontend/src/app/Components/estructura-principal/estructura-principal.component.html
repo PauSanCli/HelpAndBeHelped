@@ -5,10 +5,10 @@
 
     
         
-        <div class="row g-4 me-3 ms-3 h-100" id="contenedor_eventos">
+        <div class="row g-4 me-3 ms-3 h-100 w-100" id="contenedor_eventos">
 
               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" *ngFor="let evento of eventos" >
-                <div class="card w-75" id="{{evento.tipo}}">
+                <div class="card w-75 h-100" id="{{evento.tipo}}">
                   <img src="{{evento.imagen}}" id="foto_cards" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h4 class="card-title text-center pb-2">{{ evento.nombre }}</h4>

@@ -28,10 +28,10 @@
                 <div class="card-header">
                     <p class="fs-3 fw-light">Crear nuevo Evento</p>
                 </div>
-              <div class="alert alert-danger" role="alert" id="{{correcto}}">Evento Creado Correctamente</div>
+              <div class="alert alert-success" role="alert" id="{{correcto}}">Evento Creado Correctamente</div>
 
                 <div class="card-body mx-auto">
-                    <form  id="addEvento" (submit)="addEvento()" class="mt-4 mb-4">
+                    <form [formGroup] = 'formEvento'  id="addEvento" (ngSubmit)="addEvento(formEvento.value)" method="post" class="mt-4 mb-4">
 
                         <div class="row g-3 align-items-center">
                             <div class="col-auto">
@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="col-auto">
-                              <input type="text" id="inputPassword6" class="form-control" name="titulo" (ngModel)="titulo" aria-describedby="passwordHelpInline">
+                              <input type="text" id="inputPassword6" class="form-control" name="titulo" formControlName="titulo" aria-describedby="passwordHelpInline">
                             </div>
 
                             <div class="col-auto">
@@ -47,7 +47,7 @@
                               </div>
 
                               <div class="col-auto">
-                                <input type="date" id="inputPassword6" class="form-control"  name="fecha" (ngModel)="fecha" aria-describedby="passwordHelpInline">
+                                <input type="date" id="inputPassword6" class="form-control"  name="fecha" formControlName="fecha" aria-describedby="passwordHelpInline">
                               </div>
 
                           </div>
@@ -55,7 +55,7 @@
                           <div class="row mt-4">
 
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" (ngModel)="descripcion" name="descripcion" style="height: 100px"></textarea>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" formControlName="descripcion" name="descripcion" style="height: 100px"></textarea>
                                 <label for="floatingTextarea2" class="ps-4">Descripción del evento</label>
                               </div>
 
@@ -69,29 +69,40 @@
                                 </div>
 
                             <div class="col">
-                                <select class="form-select" aria-label="Default select example" (ngModel)="tipo"  name="tipo">
-                                    <option selected value="naturaleza">Naturaleza</option>
+                                <select class="form-select" aria-label="Default select example" formControlName="tipo"  name="tipo">
+                                    <option selected value="Naturaleza">Naturaleza</option>
                                     <option value="Limpieza">Limpieza</option>
-                                    <option value="Anmales">Animales</option>
+                                    <option value="Animales">Animales</option>
                                     <option value="Caridad">Caridad</option>
                                     <option value="Otros">Otros..</option>
-                                    </select>
+                                </select>
                             </div>
 
                         
                
                             
                         </div>
-
+<!-- 
                         <div class="mb-3 mt-3">
                             <label for="formFile" class="form-label">Añadir Imagen</label>
-                            <input class="form-control" type="file" id="formFile" (ngModel)="formFile" name="imagen">
+                            <input class="form-control" type="file" formControlName="formFile">
+                        </div> -->
+
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                              <label for="inputPassword6" class="col-form-label">Ubicación:</label>
+                            </div>
+
+                            <div class="col-auto w-100">
+                              <input type="text" id="inputPassword6" class="form-control" name="localizacion" formControlName="ubicacion" aria-describedby="passwordHelpInline">
+                              <div id="passwordHelpBlock" class="form-text">
+                                Poner la Dirección lo mas simple posible y sin espacions. Gracias
+                              </div>
+                            </div>
                         </div>
 
-                        <input type="hidden" name="creador" #creador>
-
                         <div class="d-grid gap-2 col-6 mx-auto mt-5">
-                            <button class="btn btn-outline-success" type="button" (click)="addEvento()" #submit>Crear</button>
+                            <button class="btn btn-outline-success" type="submit">Crear</button>
                         </div>
 
                     </form>
